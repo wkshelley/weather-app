@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather 🌤</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+ <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="src/style.css">
+ <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+ <script src="https://kit.fontawesome.com/747539e778.js" crossorigin="anonymous"></script>
+</head>
+</html>
+  <div class="container"> 
+    <body class="border border-2">
+      <div class="weather">
+      <h1 id="temp"> Chicago 43˚</h1> 
+      <span class="temp">
+        <a href ="#" id="c-temp"> C˚</a>               ︱                 
+        <a href="#" id="f-temp">F˚</a> 
+      </span>
+      <div><form id="search-form" class="rounded">
+      <input type="text" id="city-input"  autocomplete="off" autofocus="on"  placeholder="Enter City or Zip" >
+      <input type="submit"  value= 🔎> 
+      <button class="rounded" >📍</button>
+    </form>
+    </div>
+   
+<div class="row ml-6">
+<div class="col-6">
+     <div class="card block" style="width: 18rem;">
+         <img src="images/chicago.svg" alt="" class="card-img" style="width:105%;">
+         <div class="card-img-overlay">
+      <h5 id="city" class="card-title rounded">Chicago, IL</h5>   
+      <div class="card-body pt-0">    
+       <ul>
+        <li id="current-day"> Friday</li> 
+      
+      <li id="description">Partly Cloudy  </li>
+      <li id="wind">Wind Speed 10 mph</li>
+      <li id ="humidity">Humidity 32%</li>
+     </ul>
+   </div>
+        </div>
+     </div>
+</div>
+
+          
+  
+  <div class="col-6">
+                       <div class="card block" style="width: 18rem;">
+  <img src="images/chicago.svg" alt="" class="card-img pt-3" style="width:auto;">
+                        <div class="card-img-overlay">
+  <div class="card-body pt-0">
+    <h5 class="card-title">Todays Details</h5>
+      <ul>
+       <li class="pt-1">Morning <strong>32˚ ☁️</strong></li> 
+      <li >Afternoon <strong>48˚ ☀️</strong></li>
+      <li >Evening <strong>42˚🌙</strong></li>
+     </ul>
+     </div>
+     </div>
+    </div>
+</div>
+</div>
+
+  <div style="text-align: center;"  id="current-time"> Last Updated  </div>
+</div>
+</div>
+</div>
+ 
+    
+  </div>
+   <script  src="src/app.js"></script>
+    </body>
+  </div>
+</html>

@@ -1,0 +1,93 @@
+body {
+  background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+  border-radius: 5%;
+  margin: 2% 20% 15% 20%;
+  padding: 0% 2% 10% 2%;
+  font-family: "Varela Round", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #5fcfe8;
+}
+button {
+  display: inline-block;
+}
+h1 {
+  font-size: 30px;
+  margin-top: 29px;
+  padding-right: 75px;
+  padding-top: 34px;
+  text-align: center;
+}
+
+h5 {
+  margin-left: -4px;
+
+  text-align: center;
+}
+
+li {
+  margin-right: 33px;
+}
+
+ul {
+  list-style-type: none;
+  text-align: center;
+  padding-bottom: 8%;
+}
+
+form {
+  align-content: center;
+  text-align: center;
+  margin: 0 136px 25px 102px;
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+
+select {
+  margin: 10px 0 0 10px;
+}
+
+.block {
+  border-radius: 5%;
+  box-shadow: 5px 6px 6px 2px #a6b8c9;
+  height: 95%;
+  padding-top: 15%;
+  padding-bottom: 10%;
+}
+
+.col-6 {
+  flex: 0 0 auto;
+  padding-right: -13px;
+  padding-left: 72px;
+  width: 43%;
+}
+.ddbutton {
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  margin: 0% 33%;
+  padding: 50px 30px 10px 1px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.future {
+  border-radius: 1%;
+  border: thin;
+  border-color: black;
+}
+.temp {
+  margin-left: -88px;
+  font-size: 22px;
+  text-align: center;
+  display: block;
+}
+
+.weather {
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border: none;
+  border-radius: 5%;
+  padding: 2%x 0 2% 0;
+  height: 75vh;
+}
