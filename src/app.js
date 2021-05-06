@@ -67,10 +67,10 @@ let currentTime = document.querySelector("#current-time");
 //let currentSeconds = now.getSeconds();
 let time = new Date();
 
-currentTime.innerHTML = time.toLocaleString("en-US", {
+currentTime.innerHTML = `Last updated at ${time.toLocaleString("en-US", {
   hour: "numeric",
   hour12: true,
-});
+})} <br> coded by Shelley White`;
 currentDay.innerHTML = ` ${day} ${currentDate}`;
 //currentTime.innerHTML = ` Last Updated ${currentHour}:${currentMinutes} <br> coded by Shelley White`;
 
