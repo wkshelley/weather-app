@@ -62,12 +62,17 @@ let days = [
 let day = days[now.getDay()];
 let currentDate = now.getDate();
 let currentTime = document.querySelector("#current-time");
-let currentHour = now.getHours();
-let currentMinutes = now.getMinutes();
-let currentSeconds = now.getSeconds();
+//let currentHour = now.getHours();
+//let currentMinutes = now.getMinutes();
+//let currentSeconds = now.getSeconds();
+let time = new Date();
 
+currentTime.innerHTML = time.toLocaleString("en-US", {
+  hour: "numeric",
+  hour12: true,
+});
 currentDay.innerHTML = ` ${day} ${currentDate}`;
-currentTime.innerHTML = ` Last Updated ${currentHour}:${currentMinutes} <br> coded by Shelley White`;
+//currentTime.innerHTML = ` Last Updated ${currentHour}:${currentMinutes} <br> coded by Shelley White`;
 
 //function fTemp(event) {
 //  event.preventDefault();
