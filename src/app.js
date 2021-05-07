@@ -67,7 +67,9 @@ let time = new Date();
 currentTime.innerHTML = `Last updated at ${time.toLocaleString("en-US", {
   hour: "numeric",
   hour12: true,
-})} <br> coded by Shelley White`;
+})} <br> coded by Shelley White `;
+https://github.com/wkshelley/weather-app.git
+
 //let temperatureElement = document.querySelector("#temp");
 //function fTemp(event) {
 // event.preventDefault();
