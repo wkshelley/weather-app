@@ -73,9 +73,9 @@ currentTime.innerHTML = `Last updated at ${time.toLocaleString("en-US", {
 })} <br> coded by Shelley White`;
 currentDay.innerHTML = ` ${day} ${currentDate}`;
 
-let temperatureElement = document.querySelector("#temp");
 function fTemp(event) {
   event.preventDefault();
+  let temperatureElement = document.querySelector("#temp");
   temperatureElement.innerHTML = Math.round((temperature * 9) / 5 + 32);
 }
 
