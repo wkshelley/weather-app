@@ -74,18 +74,18 @@ currentTime.innerHTML = `Last updated at ${time.toLocaleString("en-US", {
 currentDay.innerHTML = ` ${day} ${currentDate}`;
 //currentTime.innerHTML = ` Last Updated ${currentHour}:${currentMinutes} <br> coded by Shelley White`;
 
-function fTemp(event) {
-  event.preventDefault();
-  let apiKey = "969aa20a54046a1f43968e313b89d478";
-  let units = "metric";
-  let temperature = Math.round(response.data.main.temp);
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
-  let fLink = document.querySelector("h1");
-  fLink.innerHTML = temperature;
-}
-axios.get(apiUrl).then(fTemp);
-let farenheit = document.querySelector("#f-temp");
-farenheit.addEventListener("click", fTemp);
+//function fTemp(event) {
+//event.preventDefault();
+//let apiKey = "969aa20a54046a1f43968e313b89d478";
+//let units = "metric";
+//let temperature = Math.round(response.data.main.temp);
+//let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+//let fLink = document.querySelector("h1");
+//fLink.innerHTML = temperature;
+//}
+//axios.get(apiUrl).then(fTemp);
+//let farenheit = document.querySelector("#f-temp");
+//farenheit.addEventListener("click", fTemp);
 
 //function cTemp(event) {
 //event.preventDefault();
