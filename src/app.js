@@ -74,13 +74,13 @@ currentTime.innerHTML = `Last updated at ${time.toLocaleString("en-US", {
 currentDay.innerHTML = ` ${day} ${currentDate}`;
 //currentTime.innerHTML = ` Last Updated ${currentHour}:${currentMinutes} <br> coded by Shelley White`;
 
-//function fTemp(event) {
-//  event.preventDefault();
-//let fLink = document.querySelector("h1");
-//fLink.innerHTML = 43;
-//}
-//let farenheit = document.querySelector("#f-temp");
-//farenheit.addEventListener("click", fTemp);
+function fTemp(event) {
+  event.preventDefault();
+  let fLink = document.querySelector("h1");
+  fLink.innerHTML = temperature;
+}
+let farenheit = document.querySelector("#f-temp");
+farenheit.addEventListener("click", fTemp);
 
 //function cTemp(event) {
 //event.preventDefault();
