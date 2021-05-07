@@ -61,14 +61,14 @@ let days = [
 ];
 let day = days[now.getDay()];
 let currentDate = now.getDate();
-currentDay.innerHTML = ` ${day} ${currentDate}`;
 let currentTime = document.querySelector("#current-time");
+
 let time = new Date();
 currentTime.innerHTML = `Last updated at ${time.toLocaleString("en-US", {
   hour: "numeric",
   hour12: true,
 })} <br> coded by Shelley White `;
-https://github.com/wkshelley/weather-app.git
+currentDay.innerHTML = ` ${day} ${currentDate}`;
 
 //let temperatureElement = document.querySelector("#temp");
 //function fTemp(event) {
