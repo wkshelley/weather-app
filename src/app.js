@@ -73,15 +73,12 @@ currentTime.innerHTML = `Last updated at ${time.toLocaleString("en-US", {
 })} <br> coded by Shelley White`;
 currentDay.innerHTML = ` ${day} ${currentDate}`;
 
+let temperatureElement = document.querySelector("#temp");
 function fTemp(event) {
   event.preventDefault();
-  let apiKey = "969aa20a54046a1f43968e313b89d478";
-  let units = "metric";
-  let temperature = Math.round(response.data.main.temp);
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
-  let fLink = document.querySelector("h1");
-  fLink.innerHTML = `${temperature} ${units}`;
+  temperatureElement.innerHTML = Math.round((temperature * 9) / 5 + 32);
 }
+
 let farenheit = document.querySelector("#f-temp");
 farenheit.addEventListener("click", fTemp);
 
