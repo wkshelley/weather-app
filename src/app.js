@@ -61,26 +61,20 @@ let days = [
 ];
 let day = days[now.getDay()];
 let currentDate = now.getDate();
+currentDay.innerHTML = ` ${day} ${currentDate}`;
 let currentTime = document.querySelector("#current-time");
-//let currentHour = now.getHours();
-//let currentMinutes = now.getMinutes();
-//let currentSeconds = now.getSeconds();
 let time = new Date();
-
 currentTime.innerHTML = `Last updated at ${time.toLocaleString("en-US", {
   hour: "numeric",
   hour12: true,
 })} <br> coded by Shelley White`;
-currentDay.innerHTML = ` ${day} ${currentDate}`;
-
-function fTemp(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temp");
-  temperatureElement.innerHTML = Math.round((temperature * 9) / 5 + 32);
-}
-
-let farenheit = document.querySelector("#f-temp");
-farenheit.addEventListener("click", fTemp);
+//let temperatureElement = document.querySelector("#temp");
+//function fTemp(event) {
+// event.preventDefault();
+//temperatureElement.innerHTML = Math.round((temperature * 9) / 5 + 32);
+//}
+//let farenheit = document.querySelector("#f-temp");
+//farenheit.addEventListener("click", fTemp);
 
 //function cTemp(event) {
 //event.preventDefault();
