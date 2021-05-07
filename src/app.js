@@ -13,7 +13,7 @@ function showTemperature(response) {
   h1.innerHTML = `${city} </br>${temperature}F˚`;
   currentHumidity.innerHTML = `Humidity ${humidity}%`;
   currentDescription.innerHTML = `${description}`;
-  currentWind.innerHTML = `Wind Speed ${wind} mph`;
+  currentwindSpeed.innerHTML = `Wind Speed ${wind} mph`;
 }
 
 function search(city) {
@@ -76,9 +76,14 @@ currentDay.innerHTML = ` ${day} ${currentDate}`;
 
 function fTemp(event) {
   event.preventDefault();
+  let apiKey = "969aa20a54046a1f43968e313b89d478";
+  let units = "metric";
+  let temperature = Math.round(response.data.main.temp);
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   let fLink = document.querySelector("h1");
   fLink.innerHTML = temperature;
 }
+axios.get(apiUrl).then(fTemp);
 let farenheit = document.querySelector("#f-temp");
 farenheit.addEventListener("click", fTemp);
 
