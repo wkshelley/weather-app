@@ -16,7 +16,7 @@ h1 {
   font-size: 30px;
   margin-top: 29px;
   padding-right: 75px;
-  padding-top: 34px;
+  padding-top: 20px;
   text-align: center;
 }
 
@@ -78,6 +78,7 @@ select {
   border-color: black;
 }
 .git {
+  background-color: black;
   display: block;
   text-align: center;
   margin: 0 auto;
