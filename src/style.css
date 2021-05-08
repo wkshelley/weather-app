@@ -77,6 +77,11 @@ select {
   border: thin;
   border-color: black;
 }
+.git {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
 .temp {
   margin-left: -88px;
   font-size: 22px;
