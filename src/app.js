@@ -10,7 +10,7 @@ function showTemperature(response) {
   let currentHumidity = document.querySelector("#humidity");
   let windSpeed = document.querySelector("#wind");
   let h1 = document.querySelector("h1");
-  h1.innerHTML = `${city} </br>${temperature}F˚`;
+  h1.innerHTML = `${city}' ' ${temperature} F˚`;
   currentHumidity.innerHTML = `Humidity ${humidity}%`;
   currentDescription.innerHTML = `${description}`;
   windSpeed.innerHTML = `Wind Speed ${wind} mph`;
