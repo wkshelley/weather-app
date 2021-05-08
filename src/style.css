@@ -78,7 +78,7 @@ select {
   border-color: black;
 }
 .git {
-  text-decoration-color: black;
+  color: black;
   display: block;
   text-align: center;
   margin: 0 auto;
