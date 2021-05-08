@@ -13,7 +13,7 @@ function showTemperature(response) {
   h1.innerHTML = `${city} </br>${temperature}F˚`;
   currentHumidity.innerHTML = `Humidity ${humidity}%`;
   currentDescription.innerHTML = `${description}`;
-  currentwindSpeed.innerHTML = `Wind Speed ${wind} mph`;
+  windSpeed.innerHTML = `Wind Speed ${wind} mph`;
 }
 
 function search(city) {
