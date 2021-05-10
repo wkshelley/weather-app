@@ -1,5 +1,5 @@
 function showTemperature(response) {
-  console.log(response);
+  console.log(response.data);
 
   let description = response.data.weather[0].description;
   let humidity = Math.round(response.data.main.humidity);
@@ -10,6 +10,7 @@ function showTemperature(response) {
   let currentHumidity = document.querySelector("#humidity");
   let windSpeed = document.querySelector("#wind");
   let h1 = document.querySelector("h1");
+
   h1.innerHTML = `${city} ${temperature} F˚`;
   currentHumidity.innerHTML = `Humidity ${humidity}%`;
   currentDescription.innerHTML = `${description}`;
