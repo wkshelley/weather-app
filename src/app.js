@@ -10,11 +10,17 @@ function showTemperature(response) {
   let currentHumidity = document.querySelector("#humidity");
   let windSpeed = document.querySelector("#wind");
   let h1 = document.querySelector("h1");
+  let iconElement = document.querySelector("#icon");
 
   h1.innerHTML = `${city} ${temperature} F˚`;
   currentHumidity.innerHTML = `Humidity ${humidity}%`;
   currentDescription.innerHTML = `${description}`;
   windSpeed.innerHTML = `Wind Speed ${wind} mph`;
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function search(city) {
@@ -30,6 +36,7 @@ function searchCity(event) {
   cityElement.innerHTML = cityInput.value;
   search(cityInput.value);
 }
+
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", searchCity);
 
@@ -48,7 +55,6 @@ function getPosition() {
 
 let button = document.querySelector("button");
 button.addEventListener("click", getPosition);
-
 let now = new Date();
 let currentDay = document.querySelector("#current-day");
 let days = [
