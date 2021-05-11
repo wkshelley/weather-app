@@ -4,6 +4,7 @@ body {
   margin: 2% 20% 15% 20%;
   padding: 0% 2% 10% 2%;
   font-family: "Varela Round", sans-serif;
+  list-style-type: none;
 }
 a {
   text-decoration: none;
@@ -14,34 +15,23 @@ button {
 }
 h1 {
   font-size: 30px;
-  margin-top: 29px;
-  padding-right: 75px;
-  padding-top: 20px;
-  text-align: center;
+  margin-top: 22px;
+  padding-right: 15px;
+  padding-top: 15px;
 }
-
-h5 {
-  margin-left: -4px;
-
-  text-align: center;
-}
-
-li {
-  margin-right: 33px;
-}
-
-ul {
-  list-style-type: none;
-  text-align: center;
-  padding-bottom: 8%;
-}
-
 form {
   align-content: center;
-  text-align: center;
-  margin: 0 136px 25px 102px;
-  padding-top: 5px;
+  margin: 13px 10px 25px;
   padding-bottom: 15px;
+}
+li {
+  list-style: none;
+  color: rgb(135, 135, 135);
+  font-weight: 150;
+}
+
+li:first-letter {
+  text-transform: capitalize;
 }
 
 select {
@@ -56,11 +46,12 @@ select {
   padding-bottom: 10%;
 }
 
-.col-6 {
-  flex: 0 0 auto;
-  padding-right: -13px;
-  padding-left: 72px;
-  width: 43%;
+.weather-temperature {
+  margin-left: -29px;
+}
+.weather-description {
+  margin-right: -299px;
+  margin-top: -55px;
 }
 .ddbutton {
   border-radius: 4px;
@@ -78,22 +69,12 @@ select {
   border-color: black;
 }
 .git {
-  color: black;
   display: block;
   text-align: center;
   margin: 0 auto;
 }
 .temp {
-  margin-left: -88px;
-  font-size: 22px;
+  margin-left: 5px;
+  font-size: 20px;
   text-align: center;
-  display: block;
-}
-
-.weather {
-  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  border: none;
-  border-radius: 5%;
-  padding: 2%x 0 2% 0;
-  height: 75vh;
 }

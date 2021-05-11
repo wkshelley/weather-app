@@ -12,10 +12,10 @@ function showTemperature(response) {
   let h1 = document.querySelector("h1");
   let iconElement = document.querySelector("#icon");
 
-  h1.innerHTML = `${city} ${temperature} F˚`;
+  h1.innerHTML = `${city} ${temperature} ˚`;
   currentHumidity.innerHTML = `Humidity ${humidity}%`;
   currentDescription.innerHTML = `${description}`;
-  windSpeed.innerHTML = `Wind Speed ${wind} mph`;
+  windSpeed.innerHTML = `Wind ${wind} mph`;
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
@@ -31,9 +31,9 @@ function search(city) {
 }
 function searchCity(event) {
   event.preventDefault();
-  let cityElement = document.querySelector("#city");
+  //let cityElement = document.querySelector("#city");
   let cityInput = document.querySelector("#city-input");
-  cityElement.innerHTML = cityInput.value;
+  //cityElement.innerHTML = cityInput.value;
   search(cityInput.value);
 }
 
@@ -52,9 +52,9 @@ function showPosition(position) {
 function getPosition() {
   navigator.geolocation.getCurrentPosition(showPosition);
 }
-
 let button = document.querySelector("button");
 button.addEventListener("click", getPosition);
+
 let now = new Date();
 let currentDay = document.querySelector("#current-day");
 let days = [

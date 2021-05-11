@@ -14,33 +14,50 @@
 </head>
 </html>
   <div class="container"> 
-    <body class="border border-2">
+   <body class="border border-2">
       <div class="weather">
+        <div class="col">
+          <div style="float: right;"><form id="search-form" class="rounded">
+          <input type="text" id="city-input"  autocomplete="off" autofocus="on"  placeholder="Enter City or Zip" >
+          <input type="submit"  value= 🔎> 
+          <button class="rounded" >📍</button>
+        </form>
+        </div>
+       </div>
+
+        <div class="row-6"> 
+    <div class="col">
       <h1 id="temp"> Chicago 43˚</h1> 
-      <span class="temp">
-        <a href ="#" id="c-temp"> C˚</a>               ︱                 
-        <a href="#" id="f-temp">F˚</a> 
-      </span>
-      <div><form id="search-form" class="rounded">
-      <input type="text" id="city-input"  autocomplete="off" autofocus="on"  placeholder="Enter City or Zip" >
-      <input type="submit"  value= 🔎> 
-      <button class="rounded" >📍</button>
-    </form>
-    </div>
    
-<div class="row ml-6">
-<div class="col-6">
-<div class="card block" style="width: 18rem;">
-     <img src=" " alt="" id="icon" class="card-img pt-3" style="width:auto;"> 
-         <div class="card-img-overlay">
-      <h5 class="card-title rounded">Today's Details</h5>   
-      <div class="card-body pt-0">    
+  
+       </div> 
+  </div>
+
+  </div>
+<!--<div class="row ml-6">-->
+<!--<div class="col-6">-->
+<!--<div class="card block" style="width: 18rem;">-->
+   
+         <!--<div class="card-img-overlay">-->
+   <!---   <h5 class="card-title rounded">Today's Details</h5>   
+      <div class="card-body pt-0">-->
        <ul>
-        <li id="current-day"> Friday</li> 
-      
-      <li id="description">Partly Cloudy  </li>
-      <li id="wind">Wind Speed 10 mph</li>
-      <li id ="humidity">Humidity 32%</li>
+         <div class="col-6 weather-temperature" >
+        <li id="current-day"> Friday</li>        
+        <li id="description">Partly Cloudy  </li>
+      </div>
+    </div>
+    <span class="temp">
+      <a href ="#" id="c-temp"> C˚</a>               ︱                 
+      <a href="#" id="f-temp">F˚</a> 
+    </span>
+    <img src=" " alt="" id="icon" > 
+    
+      <div class="col-9 weather-description" style="float: right;">
+        <li id="wind">Wind Speed 10 mph</li>
+        <li id ="humidity">Humidity 32%</li>
+        </div>
+      </div>
      </ul>
    </div>
         </div>
@@ -50,11 +67,11 @@
           
   
 <div class="col-6">
-    <div class="card block" style="width: 18rem;" >             
-<img src="images/chicago.svg" alt="" class="card-img pt-3" style="width:auto;"> 
+   <!---<div class="card block" style="width: 18rem;" >-->             
+<!--<img src="images/chicago.svg" alt="" class="card-img pt-3" style="width:auto;"> 
                         <div class="card-img-overlay">
-  <div class="card-body pt-0">
-    <h5 class="card-title">Todays Details</h5>
+  <div class="card-body pt-0">-->
+    <h5 class="card-title">Forecast</h5>
       <ul>
        <li class="pt-1">Morning 32˚ ☁️</li> 
       <li >Afternoon <strong>48˚ ☀️</strong></li>
@@ -67,7 +84,7 @@
 
 
   <div style="text-align: center;"  id="current-time"> Last Updated  </div>
-  <div class="git"><a href="https://github.com/wkshelley/weather-app " alt ="">Check out my Git Hub </a></div>
+  <div class="git"><a href="https://github.com/wkshelley/weather-app " alt ="">Check out my Git Hub  test</a></div>
 </div>
 </div>
 </div>
