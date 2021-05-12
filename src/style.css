@@ -17,8 +17,9 @@ h1 {
 }
 form {
   align-content: center;
-  margin: 13px 10px 25px;
-  padding-bottom: 15px;
+  float: right;
+  padding-top: 20px;
+  margin-right: 10px;
 }
 li {
   list-style: none;
@@ -46,7 +47,7 @@ select {
   background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
   border-radius: 5%;
   margin: 2% 20% 15% 20%;
-  padding: 2% 2% 10% 2%;
+  padding: 2% 2% 2% 2%;
 }
 .weather-temperature {
   margin-left: -29px;
@@ -65,11 +66,6 @@ select {
   white-space: nowrap;
 }
 
-.future {
-  border-radius: 1%;
-  border: thin;
-  border-color: black;
-}
 .git {
   display: block;
   text-align: center;

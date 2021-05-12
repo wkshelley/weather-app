@@ -31,12 +31,11 @@ function search(city) {
 }
 function searchCity(event) {
   event.preventDefault();
-  //let cityElement = document.querySelector("#city");
   let cityInput = document.querySelector("#city-input");
-  //cityElement.innerHTML = cityInput.value;
   search(cityInput.value);
 }
 
+search("New York");
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", searchCity);
 
