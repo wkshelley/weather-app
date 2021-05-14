@@ -1,6 +1,7 @@
 body {
   font-family: "Varela Round", sans-serif;
   list-style-type: none;
+  text-decoration: none;
 }
 a {
   text-decoration: none;
@@ -24,7 +25,8 @@ form {
 li {
   list-style: none;
   color: rgb(135, 135, 135);
-  font-weight: 150;
+  font-weight: 200;
+  font-size: 18px;
 }
 
 li:first-letter {
@@ -64,6 +66,16 @@ select {
   padding: 50px 30px 10px 1px;
   text-align: center;
   white-space: nowrap;
+}
+
+.future {
+  border-radius: 0.25rem;
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 10px;
+  padding-left: 170px;
+  margin-bottom: 17px;
 }
 
 .git {
