@@ -1,18 +1,19 @@
 function showTemperature(response) {
-  console.log(response.data);
-
   let description = response.data.weather[0].description;
   let humidity = Math.round(response.data.main.humidity);
   let temperature = Math.round(response.data.main.temp);
+  farenheitTemp = Math.round(response.data.main.temp);
   let wind = Math.round(response.data.wind.speed);
   let city = response.data.name;
   let currentDescription = document.querySelector("#description");
   let currentHumidity = document.querySelector("#humidity");
   let windSpeed = document.querySelector("#wind");
   let h1 = document.querySelector("h1");
+  let h2 = document.querySelector("h2");
   let iconElement = document.querySelector("#icon");
 
-  h1.innerHTML = `${city} ${temperature} ˚`;
+  h1.innerHTML = `${city}`;
+  h2.innerHTML = `${temperature}`;
   currentHumidity.innerHTML = `Humidity ${humidity}%`;
   currentDescription.innerHTML = `${description}`;
   windSpeed.innerHTML = `Wind ${wind} mph`;
@@ -74,23 +75,25 @@ currentDay.innerHTML = ` ${day} ${currentDate}`;
 
 function farenheitTemperature(event) {
   event.preventDefault();
-  let temperatureElement = document.querySelector("#temp");
+  let temperatureElement = document.querySelector("#city");
   temperatureElement.innerHTML = Math.round(farenheitTemp);
 }
 
 function celsiusTemperature(event) {
   event.preventDefault();
-  let temperatureElement = document.querySelector("#temp");
+  let temperatureElement = document.querySelector("#city");
   let celsiusTemperature = (farenheitTemp - 32) * (5 / 9);
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+  let cTemp = Math.round(celsiusTemperature);
+
+  temperatureElement.innerHTML = `${cTemp}`;
 }
 
-search("New York");
+let farenheitTemp = null;
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", searchCity);
-let farenheitTemp = null;
 
-let celsiusLink = document.querySelector("c-temp");
+let celsiusLink = document.querySelector("#c-temp");
 celsiusLink.addEventListener("click", celsiusTemperature);
-let farenheitLink = document.querySelector("f-temp");
+let farenheitLink = document.querySelector("#f-temp");
 farenheitLink.addEventListener("click", farenheitTemperature);
+search("New York");
