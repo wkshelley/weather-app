@@ -13,7 +13,7 @@ function showTemperature(response) {
   let iconElement = document.querySelector("#icon");
 
   h1.innerHTML = `${city}`;
-  h2.innerHTML = `${temperature}`;
+  h2.innerHTML = `${temperature}°`;
   currentHumidity.innerHTML = `Humidity ${humidity}%`;
   currentDescription.innerHTML = `${description}`;
   windSpeed.innerHTML = `Wind ${wind} mph`;
@@ -51,32 +51,11 @@ function getPosition() {
 let button = document.querySelector("button");
 button.addEventListener("click", getPosition);
 
-let now = new Date();
-let currentDay = document.querySelector("#current-day");
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let day = days[now.getDay()];
-let currentDate = now.getDate();
-let currentTime = document.querySelector("#current-time");
-
-let time = new Date();
-currentTime.innerHTML = `Last updated at ${time.toLocaleString("en-US", {
-  hour: "numeric",
-  hour12: true,
-})} <br> coded by Shelley White `;
-currentDay.innerHTML = ` ${day} ${currentDate}`;
-
 function farenheitTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#city");
-  temperatureElement.innerHTML = Math.round(farenheitTemp);
+  let fTemp = Math.round(farenheitTemp);
+  temperatureElement.innerHTML = `${fTemp}°`;
 }
 
 function celsiusTemperature(event) {
@@ -84,8 +63,7 @@ function celsiusTemperature(event) {
   let temperatureElement = document.querySelector("#city");
   let celsiusTemperature = (farenheitTemp - 32) * (5 / 9);
   let cTemp = Math.round(celsiusTemperature);
-
-  temperatureElement.innerHTML = `${cTemp}`;
+  temperatureElement.innerHTML = `${cTemp}°`;
 }
 
 let farenheitTemp = null;
@@ -97,3 +75,25 @@ celsiusLink.addEventListener("click", celsiusTemperature);
 let farenheitLink = document.querySelector("#f-temp");
 farenheitLink.addEventListener("click", farenheitTemperature);
 search("New York");
+
+let now = new Date();
+let currentDay = document.querySelector("#current-day");
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+let time = new Date();
+let day = days[now.getDay()];
+let currentDate = now.getDate();
+let currentTime = document.querySelector("#current-time");
+
+currentTime.innerHTML = `Last updated: ${day} ${time.toLocaleString("en-US", {
+  hour: "numeric",
+  hour12: true,
+})}`;
+currentDay.innerHTML = ` ${day} ${currentDate}`;

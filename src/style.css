@@ -3,10 +3,7 @@ body {
   list-style-type: none;
   text-decoration: none;
 }
-a {
-  text-decoration: none;
-  color: #5fcfe8;
-}
+
 button {
   display: inline-block;
 }
@@ -36,6 +33,11 @@ li:first-letter {
 select {
   margin: 10px 0 0 10px;
 }
+a {
+  text-decoration: none;
+  cursor: default;
+  color: black;
+}
 
 .block {
   border-radius: 5%;
@@ -54,6 +56,7 @@ select {
 .weather-temperature {
   margin-left: -29px;
 }
+
 .weather-description {
   margin-right: -237px;
   margin-top: -45px;
