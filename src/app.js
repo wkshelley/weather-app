@@ -1,12 +1,16 @@
 function showTemperature(response) {
+  console.log(response.data);
+
   let description = response.data.weather[0].description;
   let humidity = Math.round(response.data.main.humidity);
   let temperature = Math.round(response.data.main.temp);
+  let feelsLike = Math.round(response.data.main.feels_like);
   farenheitTemp = Math.round(response.data.main.temp);
   let wind = Math.round(response.data.wind.speed);
   let city = response.data.name;
   let currentDescription = document.querySelector("#description");
   let currentHumidity = document.querySelector("#humidity");
+  let currentFeelsLike = document.querySelector("#feels-like");
   let windSpeed = document.querySelector("#wind");
   let h1 = document.querySelector("h1");
   let h2 = document.querySelector("h2");
@@ -14,9 +18,10 @@ function showTemperature(response) {
 
   h1.innerHTML = `${city}`;
   h2.innerHTML = `${temperature}°`;
-  currentHumidity.innerHTML = `Humidity ${humidity}%`;
+  currentHumidity.innerHTML = `Humidity: ${humidity}%`;
+  currentFeelsLike.innerHTML = `Feels Like: ${feelsLike} °`;
   currentDescription.innerHTML = `${description}`;
-  windSpeed.innerHTML = `Wind ${wind} mph`;
+  windSpeed.innerHTML = `Wind: ${wind} mph`;
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
@@ -53,17 +58,25 @@ button.addEventListener("click", getPosition);
 
 function farenheitTemperature(event) {
   event.preventDefault();
+  farenheitLink.classList.add("active");
+  celsiusLink.classList.remove("active");
   let temperatureElement = document.querySelector("#city");
+  let feelsLikeElement = document.querySelector("#feels-like");
   let fTemp = Math.round(farenheitTemp);
   temperatureElement.innerHTML = `${fTemp}°`;
+  //feelsLikeElement.innerHTML = `Feels Like: ${fTemp}°`;
 }
 
 function celsiusTemperature(event) {
   event.preventDefault();
+  farenheitLink.classList.remove("active");
+  celsiusLink.classList.add("active");
   let temperatureElement = document.querySelector("#city");
+  let feelsLikeElement = document.querySelector("#feels-like");
   let celsiusTemperature = (farenheitTemp - 32) * (5 / 9);
   let cTemp = Math.round(celsiusTemperature);
   temperatureElement.innerHTML = `${cTemp}°`;
+  //feelsLikeElement.innerHTML = `Feels Like: ${feelsLike}°`;
 }
 
 let farenheitTemp = null;
@@ -77,7 +90,7 @@ farenheitLink.addEventListener("click", farenheitTemperature);
 search("New York");
 
 let now = new Date();
-let currentDay = document.querySelector("#current-day");
+//let currentDay = document.querySelector("#current-day");
 let days = [
   "Sunday",
   "Monday",
@@ -91,9 +104,8 @@ let time = new Date();
 let day = days[now.getDay()];
 let currentDate = now.getDate();
 let currentTime = document.querySelector("#current-time");
-
 currentTime.innerHTML = `Last updated: ${day} ${time.toLocaleString("en-US", {
   hour: "numeric",
   hour12: true,
 })}`;
-currentDay.innerHTML = ` ${day} ${currentDate}`;
+//currentDay.innerHTML = ` ${day} ${currentDate}`;
