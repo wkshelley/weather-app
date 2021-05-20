@@ -10,23 +10,27 @@ a {
 button {
   display: inline-block;
 }
-h1,
-h2 {
+h1 {
   color: rgb(33, 33, 33);
   font-size: 24px;
-
   font-weight: 100;
   line-height: 28px;
-
-  margin-left: -13px;
-  margin-top: 5px;
+  margin: 15px 0 0 0;
+  padding: 0;
+}
+h2 {
+  color: rgb(33, 33, 33);
+  font-size: 35px;
+  font-weight: 100;
+  line-height: 28px;
   padding: 0;
 }
 
 form {
   align-content: center;
   float: right;
-  margin-bottom: 0;
+  margin: 15px 0 0 0;
+  padding: 0;
 }
 li {
   color: rgb(135, 135, 135);
@@ -58,11 +62,23 @@ select {
   max-width: 600px;
   padding: 20px;
 }
+.weather-temperature img {
+  margin-right: 5px;
+  margin-top: -14px;
+  height: 64px;
+  width: 64px;
+}
+
+.weather-temperature .units {
+  font-size: 35px;
+  margin-top: 5px;
+}
 .weather-temperature {
 }
 
 .weather-description {
-  margin-top: 5px;
+  padding: 0;
+  margin: 0;
 }
 .ddbutton {
   border-radius: 4px;
