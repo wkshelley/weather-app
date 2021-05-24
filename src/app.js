@@ -56,6 +56,31 @@ function getPosition() {
 let button = document.querySelector("button");
 button.addEventListener("click", getPosition);
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday"];
+
+  weekDays.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+              <div class="col-2">
+                <div class="weather-forecast-day">
+                  ${day}
+                </div>
+                 <img class="mb-2" src=" " alt="clear"  id="icon" width="42">
+                 <div class="weather-forecast-temp">
+                   <span> 75 °</span> |
+                   <span> 55 °</span>
+                 </div>
+                </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function farenheitTemperature(event) {
   event.preventDefault();
   farenheitLink.classList.add("active");
@@ -88,6 +113,7 @@ celsiusLink.addEventListener("click", celsiusTemperature);
 let farenheitLink = document.querySelector("#f-temp");
 farenheitLink.addEventListener("click", farenheitTemperature);
 search("New York");
+displayForecast();
 
 let now = new Date();
 //let currentDay = document.querySelector("#current-day");
@@ -108,4 +134,3 @@ currentTime.innerHTML = `Last updated: ${day} ${time.toLocaleString("en-US", {
   hour: "numeric",
   hour12: true,
 })}`;
-//currentDay.innerHTML = ` ${day} ${currentDate}`;

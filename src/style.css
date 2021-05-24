@@ -68,14 +68,10 @@ select {
   height: 64px;
   width: 64px;
 }
-
 .weather-temperature .units {
   font-size: 35px;
   margin-top: 5px;
 }
-.weather-temperature {
-}
-
 .weather-description {
   padding: 0;
   margin: 0;
@@ -88,15 +84,6 @@ select {
   padding: 50px 30px 0 0;
   text-align: center;
   white-space: nowrap;
-}
-
-.future {
-  border-radius: 0.25rem;
-  display: flex;
-  flex-direction: column;
-  padding-top: 10px;
-  padding-left: 170px;
-  margin-bottom: 17px;
 }
 
 .git {
@@ -117,4 +104,18 @@ select {
 .temp .active:hover {
   color: rgb(5, 124, 252);
   text-decoration: none;
+}
+
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+  color: #000;
+}
+.weather-forecast-day {
+  font-size: 16px;
+  opacity: 0.6;
+}
+.weather-forecast-temp {
+  font-size: 13px;
+  opacity: 0.5;
 }
