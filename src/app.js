@@ -1,6 +1,12 @@
-function showTemperature(response) {
-  console.log(response.data);
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "969aa20a54046a1f43968e313b89d478";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayForecast);
+}
 
+function showTemperature(response) {
   let description = response.data.weather[0].description;
   let humidity = Math.round(response.data.main.humidity);
   let temperature = Math.round(response.data.main.temp);
@@ -27,6 +33,7 @@ function showTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+  getForecast(response.data.coord);
 }
 
 function search(city) {
@@ -56,7 +63,8 @@ function getPosition() {
 let button = document.querySelector("button");
 button.addEventListener("click", getPosition);
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
   let weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday"];
@@ -113,7 +121,6 @@ celsiusLink.addEventListener("click", celsiusTemperature);
 let farenheitLink = document.querySelector("#f-temp");
 farenheitLink.addEventListener("click", farenheitTemperature);
 search("New York");
-displayForecast();
 
 let now = new Date();
 //let currentDay = document.querySelector("#current-day");
