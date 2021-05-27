@@ -16,37 +16,35 @@
   <div class="container"> 
    <body class="border border-2">
       <div class="weather">
-            <form id="search-form" class= "rounded">
-          <input type="text" id="city-input"  autocomplete="off" autofocus="on"  placeholder="Enter City or Zip" >
-          <input type="submit"  value= 🔎> 
-          <button class="rounded" >📍</button>
-        </form> 
-        <div class="row"> 
-          <div class="col">
-            <h1></h1>    
+          <div class="row"> 
+          <div class="col-9">
+          <form id="search-form" class= "rounded">
+          <input class="form-control" type="text" id="city-input"  autocomplete="off" autofocus="on"  placeholder="Enter City" >
           </div> 
+          <div class="col-3">
+       <input  type="submit"  value= 🔎> 
+       <button class="rounded" >📍</button>
+       </div>
+      </form>       
   </div>
-  
+  <h1></h1>    
               <ul>
                 <li id="current-time"> Friday</li>        
                 <li id="description">Partly Cloudy  </li>
                 <div class="row">
                   <div class="col-11" >
-                  
-               
-                 
-               
-                <div class="d-flex weather-temperature mt-3">
+
+                <div class="d-flex weather-temperature">
                   <img src=" " alt="clear"  id="icon" class="float-left"> 
                   <h2 class="units" id="city"></h2>
-                  <span class="temp "><a href ="#" id="c-temp" class="active"> C ˚</a>︱                 
-                    <a href="#" id="f-temp" class="active">F˚</a>     </span> 
+                  <span class="temp "><a href ="#" id="c-temp" class="active"> ˚C </a>︱                 
+                    <a href="#" id="f-temp" class="active">˚F</a>     </span> 
                   </div>     
                   </div>
                      
  <div class="col-11">
-      <div class="weather-description" style="float: right;" >
-         <li id="wind">Wind Speed 10 mph</li>
+      <div class=" d-flex align-items-end flex-column weather-description " >
+      <li id="wind" class="pr-3">Wind Speed 10 mph</li>
       <li id ="humidity">Humidity 32%</li>
       <li id="feels-like">Feels Like </li> 
  </div>
