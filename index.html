@@ -1,64 +1,91 @@
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather 🌤</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
- <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="src/style.css">
- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather 🌤</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
- <script src="https://kit.fontawesome.com/747539e778.js" crossorigin="anonymous"></script>
-</head>
-</html>
-  <div class="container"> 
-   <body class="border border-2">
+    <script
+      src="https://kit.fontawesome.com/747539e778.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="container">
       <div class="weather">
-          <div class="row"> 
-          <div class="col-9">
-          <form id="search-form" class= "rounded">
-          <input class="form-control" type="text" id="city-input"  autocomplete="off" autofocus="on"  placeholder="Enter City" >
-          </div> 
-          <div class="col-3">
-       <input  type="submit"  value= 🔎> 
-       <button class="rounded" >📍</button>
-       </div>
-      </form>       
-  </div>
-  <h1></h1>    
-              <ul>
-                <li id="current-time"> Friday</li>        
-                <li id="description">Partly Cloudy  </li>
-                <div class="row">
-                  <div class="col-11" >
-
-                <div class="d-flex weather-temperature">
-                  <img src=" " alt="clear"  id="icon" class="float-left"> 
-                  <h2 class="units" id="city"></h2>
-                  <span class="temp "><a href ="#" id="c-temp" class="active"> ˚C </a>︱                 
-                    <a href="#" id="f-temp" class="active">˚F</a>     </span> 
-                  </div>     
-                  </div>
-                     
- <div class="col-11">
-      <div class=" d-flex align-items-end flex-column weather-description " >
-      <li id="wind" class="pr-3">Wind Speed 10 mph</li>
-      <li id ="humidity">Humidity 32%</li>
-      <li id="feels-like">Feels Like </li> 
- </div>
- </div>
-  </div>
-      </ul>
-       
-                  
-             <div class="weather-forecast" id="forecast"></div>
-              <div class="pt-5" style="text-align: center;"></div>
-              <div class="git" ><a href="https://github.com/wkshelley/weather-app " target= "blank"
-                alt ="">Open-Source Code </a>by Shelley White-Lyons</div>
+        <form id="search-form" class="rounded">
+          <div class="row" id="search">
+            <div class="col-9">
+              <input
+                class="form-control"
+                type="text"
+                id="city-input"
+                autocomplete="off"
+                autofocus="on"
+                placeholder="Enter City"
+              />
+            </div>
+            <div class="col-3">
+              <input type="submit" value="🔎" />
+              <button class="rounded">📍</button>
+            </div>
+          </div>
+        </form>
+        <h1></h1>
+        <div>
+          <div class="current" id="current-time">Friday</div>
+          <div class="current" id="description">Partly Cloudy</div>
+          <div class="row">
+            <div class="col-6">
+              <div class="d-flex weather-temperature">
+                <img src=" " alt="clear" id="icon" class="float-left" />
+              </div>
+              <span class="d-flex temp"
+                ><h2 class="units float-left" id="city"></h2>
+                <a href="#" id="c-temp" class="justify-content-around active">
+                  C </a
+                >︱
+                <a href="#" id="f-temp" class="justify-content-around active">
+                  F</a
+                >
+              </span>
+            </div>
+            <div class="col-6">
+              <div class="weather-description">
+                <li id="humidity"></li>
+                <li id="feels-like"></li>
+                <li id="wind"></li>
               </div>
             </div>
-              <script  src="src/app.js"></script>
-            </body>
+          </div>
+
+          <div class="weather-forecast" id="forecast">
+          </div>
+            <div class="git">
+              <div class="pt-5" style="text-align: center"></div>
+              <a
+                href="https://github.com/wkshelley/weather-app "
+                target="blank"
+                alt=""
+                >Open-Source Code </a
+              >by Shelley White-Lyons
+            </div>
+
+          <script src="src/app.js"></script>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
